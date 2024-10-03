@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Speed TSB</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 20%;
+        }
+
+        .script {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff4b2b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Max Speed TSB</h2>
+    <div class="script" id="speed-script">
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/invertedth/Better-max-speed-fr/refs/heads/main/MODIFIED%20MAX%20SPEED"))()
+    </div>
+    <button onclick="copyToClipboard('speed-script')">Copy Script</button>
+
+    <script>
+        function copyToClipboard(elementId) {
+            var scriptText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(scriptText).then(function() {
+                alert('Copied to clipboard!');
+            }, function() {
+                alert('Failed to copy text.');
+            });
+        }
+    </script>
+</body>
+</html>
